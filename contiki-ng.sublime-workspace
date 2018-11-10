@@ -1,0 +1,412 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"get_slot_start"
+			],
+			[
+				"USER_SEN",
+				"USER_SENSOR_VECTOR"
+			],
+			[
+				"USER_SE",
+				"USER_SENSOR_PIN"
+			],
+			[
+				"RTIMER",
+				"RTIMER_NOW"
+			],
+			[
+				"da",
+				"data_user_sensor"
+			],
+			[
+				"uint",
+				"uint32_t"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "arch/platform/zoul/dev/user-sensor.h",
+			"settings":
+			{
+				"buffer_size": 1790,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "arch/platform/zoul/dev/user-sensor.c",
+			"settings":
+			{
+				"buffer_size": 4037,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "os/net/mac/tsch/tsch.c",
+			"settings":
+			{
+				"buffer_size": 41120,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/user/Desktop/contiki-ng",
+		"/home/user/Desktop/contiki-ng/arch",
+		"/home/user/Desktop/contiki-ng/arch/dev",
+		"/home/user/Desktop/contiki-ng/arch/platform",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/dev",
+		"/home/user/Desktop/contiki-ng/examples",
+		"/home/user/Desktop/contiki-ng/examples/6tisch",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch-basic",
+		"/home/user/Desktop/contiki-ng/examples/prueba_user_sensor"
+	],
+	"file_history":
+	[
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/Makefile.zoul",
+		"/home/user/Desktop/contiki-ng/os/net/mac/tsch/tsch-sync.h",
+		"/home/user/Desktop/contiki-ng/os/net/mac/tsch/tsch-slot-operation.h",
+		"/home/user/Desktop/contiki-ng/os/net/mac/tsch/tsch-slot-operation.c",
+		"/home/user/Desktop/contiki-ng/examples/prueba_user_sensor/test_sensor.c",
+		"/home/user/Desktop/contiki-ng/examples/prueba_user_sensor/Makefile",
+		"/home/user/Desktop/contiki-ng/examples/prueba_user_sensor/project-conf.h",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/server.c",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/project-conf.h",
+		"/home/user/Desktop/contiki-ng/os/lib/sensors.h",
+		"/home/user/Desktop/contiki-ng/os/net/mac/tsch/tsch-adaptive-timesync.c",
+		"/home/user/Desktop/contiki-ng/os/net/mac/tsch/tsch-log.h",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/client.c",
+		"/home/user/Desktop/contiki-ng/arch/cpu/cc2538/rtimer-arch.c",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/decoder.c",
+		"/home/user/Desktop/contiki-ng/os/net/mac/tsch/sync.h",
+		"/home/user/Desktop/contiki-ng/examples/rpl-udp/udp-client.c",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/sync.h",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/dev/motion-sensor.c",
+		"/home/user/Desktop/contiki-ng/os/sys/rtimer.c",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/dev/user-sensor.c",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/data.h",
+		"/home/user/Desktop/contiki-ng/os/net/mac/tsch/tsch-asn.h",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/basura/receiver_OKDOFSKODFKS.c",
+		"/home/user/Desktop/contiki-ng/os/sys/node-id.c",
+		"/home/user/Desktop/contiki-ng/os/sys/autostart.c",
+		"/home/user/Desktop/contiki-ng/os/sys/node-id.h",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/sender_DSMFOSMDNGRFDMF.c",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/tsch-stats/node.c",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/dev/user-sensor.h",
+		"/home/user/Desktop/contiki-ng/os/lib/sensors.c",
+		"/home/user/Desktop/contiki-ng/os/dev/user-sensor.h",
+		"/home/user/Desktop/contiki-ng/arch/cpu/cc2538/dev/ioc.h",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/dev/weather-meter.c",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/remote-revb/board.h",
+		"/home/user/Desktop/contiki-ng/arch/platform/zoul/dev/zoul-sensors.c",
+		"/home/user/Desktop/contiki-ng/arch/cpu/cc2538/dev/cc2538-sensors.h",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/Makefile",
+		"/home/user/Desktop/contiki-ng/os/net/ipv6/uip-sr.c",
+		"/home/user/Desktop/contiki-ng/os/net/ipv6/uiplib.h",
+		"/home/user/Desktop/contiki-ng/os/net/ipv6/uiplib.c",
+		"/home/user/Desktop/contiki-ng/os/net/ipv6/uip.h",
+		"/home/user/Desktop/contiki-ng/os/net/routing/rpl-classic/rpl.c",
+		"/home/user/Desktop/contiki-ng/os/net/routing/routing.h",
+		"/home/user/Desktop/contiki-ng/os/sys/log.c",
+		"/home/user/Desktop/contiki-ng/os/sys/log.h",
+		"/home/user/Desktop/contiki-ng/examples/6tisch/udp-tsch/README.md"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"get_slot_start",
+			"event_re",
+			"ref",
+			"tsch_current_asn",
+			"schedule_slo",
+			"event_ASN;",
+			"CONTIKI_TARGET_SOURCEFILES",
+			"ref",
+			"event_tim",
+			"event",
+			"struct data_sensor_t data_sensor;\n\n{\n  uint32_t event_time; // cm\n  uint32_t ref_time; // cm\n  uint32_t event_asn_ls4b;\n  uint8_t event_asn_ms1b;\n};",
+			"PT_THREAD(tsch_sl",
+			"THREAD(slot",
+			"THREAD",
+			"value",
+			"schedule_slot",
+			"schedule",
+			" while(tsch_is_associated)",
+			"SYNC(",
+			"SYNC",
+			"time_delta_ticks",
+			"PT_THREAD(tsch_slot_operation",
+			"SYNC(",
+			"schedule",
+			"addr\n",
+			"&addr\n",
+			"simple_udp_sendto(&udp_conn, msgPtr, sizeof(msg), &addr);\n",
+			"unicast_connection",
+			"GPIO_USER_PIN",
+			"GPIO_USER_PORT",
+			"status",
+			"value",
+			"USER_SENSOR_DEBOUNCE_DURATION",
+			"sensordebouncetimer",
+			"get_root_ipaddr",
+			"uiplib_ipaddr_print",
+			"buf",
+			"get_root_ipaddr",
+			"ipaddr",
+			"LOG",
+			"LOG_OUTPUT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"simple_udp_sendto(&udp_conn, msgPtr, sizeof(msg), &dest_ipaddr);",
+			"udp_conn",
+			"USER_SENSOR_PIN",
+			"USER_SENSOR_PORT",
+			"USER_SENSOR_FILTER_DURATION",
+			"filtertimer"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "arch/platform/zoul/dev/user-sensor.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "arch/platform/zoul/dev/user-sensor.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 117.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "os/net/mac/tsch/tsch.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2452,
+								2452
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "contiki-ng.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
