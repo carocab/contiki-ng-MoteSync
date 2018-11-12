@@ -8,6 +8,13 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include "decoder.h"
+#include "dev/user-sensor.h"
+#include "sys/rtimer.h"
+#include "sys/node-id.h"
+
+static struct my_msg_t msg;
+
+struct data_sensor_t data_user_sensor;
 
 ////////////////////////////////////////////////////////////////////////////
 
@@ -57,6 +64,8 @@ PROCESS_THREAD(udp_server_process, ev, data)
                       UDP_CLIENT_PORT, udp_rx_callback);
 
   etimer_set(&print_timer, CLOCK_SECOND * 30);
+
+  SENSORS_ACTIVATE(user_sensor);
   while(1) {
     PROCESS_WAIT_EVENT();
 
@@ -73,6 +82,25 @@ PROCESS_THREAD(udp_server_process, ev, data)
       /*-------------------------------------------*/
       /* END RECIEVER                              */
       /*-------------------------------------------*/
+    }
+
+    if (ev == sensors_event && data == &user_sensor){
+      data_user_sensor = get_data_sensor();
+      /*-------------------------------------------*/
+      /* SENDER                                    */
+      /*-------------------------------------------*/
+      
+      msg.id = node_id;
+      msg.x_pos = 0;
+      msg.y_pos = 0;
+      
+      msg.event_asn_ls4b = data_user_sensor.asn_ls4b;
+      msg.event_asn_ms1b = data_user_sensor.asn_ms1b;
+      
+      msg.event_offset = (data_user_sensor.event_time - data_user_sensor.ref_time);    
+      printf("ID: %d, X pos: %lu cm, Y pos: %lu cm, ASN: %lu, Offset: %lu ticks.\n", 
+      msg.id, msg.x_pos, msg.y_pos, msg.event_asn_ls4b, msg.event_offset);
+
     }
   }
   PROCESS_END();
