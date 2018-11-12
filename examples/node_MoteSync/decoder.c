@@ -60,12 +60,8 @@ void decoder_receiver(const uint8_t *data)
 		for (i = 0; i < node_count; i++){
 			if(my_nodes[i].id == msgPtr->id){
 				is_new = 0;
-<<<<<<< HEAD
-                		printf("Updating values for node %d\n", my_nodes[i].id);
-=======
                 		printf("Updating values for node %x: ", my_nodes[i].id);
->>>>>>> v2
-                
+				
                 		my_nodes[i].x_pos = msgPtr->x_pos;
                 		my_nodes[i].y_pos = msgPtr->y_pos;
 				
