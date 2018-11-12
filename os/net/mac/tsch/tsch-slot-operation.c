@@ -6,14 +6,14 @@
 *
 *   Modificaciones respecto al original:
 *       + Se definen las variables para almacenar una copia de current_slot_start y tsch_current_ASN:
-*           - static uint32_t event_ref;            (linea 85)
-*           - static struct tsch_asn_t event_ASN;   (linea 86)
+*           - static uint32_t event_ref;            
+*           - static struct tsch_asn_t event_ASN;   
 *
-*       + Se incluye interfaz publica tsch-sync.h. (linea81)
+*       + Se incluye interfaz publica tsch-sync.h. 
 *
 *       + Se implementan las funciones de tsch-sync.h:
-*           - struct tsch_asn_t get_asn(void) (linea 219)
-*           - get_slot_start(void)            (linea 223)
+*           - struct tsch_asn_t get_asn(void) 
+*           - get_slot_start(void)            
 *
 *       + Se realiza copia de current_slot_start y tsch_current_ASN al inicio del slot (linea 1003)
 *               event_ref= current_slot_start;
@@ -78,13 +78,25 @@
 #include "net/mac/framer/framer-802154.h"
 #include "net/mac/tsch/tsch.h"
 #include "net/mac/tsch/tsch-conf.h"
-#include "net/mac/tsch/tsch-sync.h"
-/*---------------------------------------------------------------------------*/
-/*------------------------------- Variables ---------------------------------*/
 
+/*---------------------------------------------------------------------------*/
+/*-------------------------------  MoteSync ---------------------------------*/
+/*---------------------------------------------------------------------------*/
+#if WITH_USER_SENSOR
+#include "net/mac/tsch/tsch-sync.h"
 static uint32_t event_ref;
 static struct tsch_asn_t event_ASN;
+/*---------------------------------------------------------------------------*/
+/** Funciones del modulo tsch-sync.h para proyecto MoteSync
+ */
+struct tsch_asn_t get_asn(void){
+  return event_ASN;
+}
 
+uint32_t get_slot_start(void){
+  return event_ref;
+}
+#endif
 /*---------------------------------------------------------------------------*/
 
 
@@ -213,17 +225,6 @@ static struct pt slot_operation_pt;
 static PT_THREAD(tsch_tx_slot(struct pt *pt, struct rtimer *t));
 static PT_THREAD(tsch_rx_slot(struct pt *pt, struct rtimer *t));
 
-/*---------------------------------------------------------------------------*/
-/** Funciones del modulo tsch-sync.h para proyecto MoteSync
- */
-struct tsch_asn_t get_asn(void){
-  return event_ASN;
-}
-
-uint32_t get_slot_start(void){
-  return event_ref;
-}
-/*---------------------------------------------------------------------------*/
 /* TSCH locking system. TSCH is locked during slot operations */
 
 /* Is TSCH locked? */
@@ -996,8 +997,9 @@ PT_THREAD(tsch_slot_operation(struct rtimer *t, void *ptr))
   PT_BEGIN(&slot_operation_pt);
   /* Loop over all active slots */
   while(tsch_is_associated) {
-    
-  /********************************************************/
+  
+#if WITH_USER_SENSOR  
+/*---------------------------------------------------------------------------*/
   /** Copia del inicio de slot y ASN actual
   */
   event_ref= current_slot_start;
@@ -1009,7 +1011,8 @@ PT_THREAD(tsch_slot_operation(struct rtimer *t, void *ptr))
   printf("Tiempo ahora %lu\n", RTIMER_NOW());
   */
   
-    /********************************************************/
+/*---------------------------------------------------------------------------*/
+#endif
 
     if(current_link == NULL || tsch_lock_requested) { /* Skip slot operation if there is no link
                                                           or if there is a pending request for getting the lock */

@@ -4,7 +4,7 @@
 /*---------------------------------------------------------------------------*/
 /* This data structure is used to store the packet content (payload) */
 struct my_msg_t {
-  uint8_t id;
+  uint16_t id;
   uint32_t x_pos; // cm
   uint32_t y_pos; // cm
   uint32_t event_asn_ls4b;
