@@ -60,12 +60,17 @@ void decoder_receiver(const uint8_t *data)
 		for (i = 0; i < node_count; i++){
 			if(my_nodes[i].id == msgPtr->id){
 				is_new = 0;
-                		printf("Updating values for node %d: ", my_nodes[i].id);
+                		printf("Updating values for node %d\n", my_nodes[i].id);
                 
                 		my_nodes[i].x_pos = msgPtr->x_pos;
                 		my_nodes[i].y_pos = msgPtr->y_pos;
-                		
-				if ((msgPtr->event_asn_ls4b >= my_nodes[i].event_asn_ls4b) && (msgPtr->event_offset > my_nodes[i].event_offset)){
+				
+				/*printf("new ASN: %lu, old ASN: %lu, new offset: %lu, old offset: %lu.\n", 
+					msgPtr->event_asn_ls4b, my_nodes[i].event_asn_ls4b, 
+					msgPtr->event_offset, my_nodes[i].event_offset);*/                		
+
+				if ((msgPtr->event_asn_ls4b > my_nodes[i].event_asn_ls4b) || 
+                                    ((msgPtr->event_asn_ls4b == my_nodes[i].event_asn_ls4b) && (msgPtr->event_offset > my_nodes[i].event_offset))){
 		        		
 					uint32_t delta_ticks = (TICKS_PER_S * (msgPtr->event_asn_ls4b - my_nodes[i].event_asn_ls4b)) / TIMESLOTS_PER_S
 								+  msgPtr->event_offset - my_nodes[i].event_offset;
