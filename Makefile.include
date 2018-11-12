@@ -122,6 +122,10 @@ ifneq ("", "$(BOARDS_EXCLUDE)")
 endif
 endif # $(BOARD) not empty
 
+ifeq($(MAKE_WITH_USER_SENSOR),1)
+CFLAGS += -DWITH_USER_SENSOR=1
+endif
+
 PLATFORM_ACTION ?= build
 
 ifneq ($(BOARD),)
@@ -140,7 +144,11 @@ MAKE_MAC_BLE = 3
 MAKE_MAC_OTHER = 4
 
 # Make CSMA the default MAC
+ifeq($(MAKE_WITH_USER_SENSOR),1)
+MAKE_MAC = MAKE_MAC_TSCH
+else
 MAKE_MAC ?= MAKE_MAC_CSMA
+endif
 
 ifeq ($(MAKE_MAC),MAKE_MAC_NULLMAC)
   MODULES+=os/net/mac/nullmac

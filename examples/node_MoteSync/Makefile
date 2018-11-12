@@ -3,6 +3,7 @@ all: $(CONTIKI_PROJECT)
 
 TARGET ?= zoul
 BOARD ?= remote-revb
+MAKE_WITH_USER_SENSOR = 1
 
 CONTIKI=../../
 

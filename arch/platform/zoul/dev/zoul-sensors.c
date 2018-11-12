@@ -43,13 +43,18 @@
 #include "contiki.h"
 #include "dev/cc2538-sensors.h"
 #include "dev/button-sensor.h"
+#if WITH_USER_SENSOR
 #include "dev/user-sensor.h" // include for user_sensor
+#endif
 #include <string.h>
 /*---------------------------------------------------------------------------*/
 /** \brief Exports global symbols for the sensor API */
 SENSORS(&vdd3_sensor,
-		&cc2538_temp_sensor, 
-		&user_sensor);
+	&cc2538_temp_sensor
+	#if WITH_USER_SENSOR
+	, &user_sensor
+	#endif
+	);
 /*---------------------------------------------------------------------------*/
 /**
  * @}
