@@ -39,7 +39,7 @@ void decoder_receiver(const uint8_t *data)
 	/* Create a pointer to the received data, adjust to the expected structure */
   	struct my_msg_t *msgPtr = (struct my_msg_t *) data;
 
-	printf("ID: %d, X pos: %lu cm, Y pos: %lu cm, ASN: %lu, Offset: %lu ticks.\n", 
+	printf("ID: %x, X pos: %lu cm, Y pos: %lu cm, ASN: %lu, Offset: %lu ticks.\n", 
 		msgPtr->id, msgPtr->x_pos, msgPtr->y_pos, msgPtr->event_asn_ls4b, msgPtr->event_offset);
 	
 	if (node_count == 0){
@@ -60,7 +60,7 @@ void decoder_receiver(const uint8_t *data)
 		for (i = 0; i < node_count; i++){
 			if(my_nodes[i].id == msgPtr->id){
 				is_new = 0;
-                		printf("Updating values for node %d: ", my_nodes[i].id);
+                		printf("Updating values for node %x: ", my_nodes[i].id);
                 
                 		my_nodes[i].x_pos = msgPtr->x_pos;
                 		my_nodes[i].y_pos = msgPtr->y_pos;
@@ -213,7 +213,7 @@ void decoder_process(void)
 
 		    	}
 			
-			printf("Closest node is %d, min_asn = %lu, min_offset = %lu\n", my_nodes[min_node].id, min_asn, min_offset);
+			printf("Closest node is %x, min_asn = %lu, min_offset = %lu\n", my_nodes[min_node].id, min_asn, min_offset);
 			
 			min_x_pos = 90;
 			max_x_pos = 110;

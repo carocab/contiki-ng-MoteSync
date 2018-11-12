@@ -90,7 +90,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
       msg.event_asn_ms1b = data_user_sensor.asn_ms1b;
       
       msg.event_offset = (data_user_sensor.event_time - data_user_sensor.ref_time);    
-      printf("ID: %d, X pos: %lu cm, Y pos: %lu cm, ASN: %lu, Offset: %lu ticks.\n", 
+      printf("ID: %x, X pos: %lu cm, Y pos: %lu cm, ASN: %lu, Offset: %lu ticks.\n", 
       msg.id, msg.x_pos, msg.y_pos, msg.event_asn_ls4b, msg.event_offset);
       
     if(NETSTACK_ROUTING.node_is_reachable() && NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
