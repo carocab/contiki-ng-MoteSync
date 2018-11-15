@@ -1,3 +1,13 @@
+/**
+*   Proyecto RSI - MoteSync
+*   Año: 2018
+*   Se agrega user_sensor a la lista sensores de la plataforma
+*/
+
+
+
+
+
 /*
  * Copyright (c) 2015, Zolertia - http://www.zolertia.com
  * Copyright (c) 2015, University of Bristol - http://www.bristol.ac.uk
