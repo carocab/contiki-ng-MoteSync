@@ -1,6 +1,7 @@
 /**
 *   Proyecto RSI - MoteSync
 *   Año: 2018
+*   Grupo: Bentancour, Cabrera, Díaz
 *   Se agrega user_sensor a la lista sensores de la plataforma
 */
 
