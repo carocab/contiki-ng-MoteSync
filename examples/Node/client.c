@@ -1,5 +1,7 @@
 /**
-*   @authors MoteSync - Proyecto RSI - IIE - FIng - Udelar
+*   Proyecto RSI - MoteSync
+*   Año: 2018
+*   Grupo: Bentancour, Cabrera, Díaz
 *   Basado en $(CONTIKI)/examples/6tisch/simple-node/
 *   y $(CONTIKI)/examples/rpl-udp/udp-{client,server}.c
 */
