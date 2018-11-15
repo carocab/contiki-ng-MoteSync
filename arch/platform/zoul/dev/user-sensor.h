@@ -1,7 +1,7 @@
 /**
 *   Proyecto RSI - MoteSync
 *   Año: 2018
-*
+*   Grupo: Bentancour, Cabrera, Díaz
 *   path: $(CONTIKI)/arch/platform/zoul/dev/user-sensor.h
 *
 *   Basado en $(CONTIKI)/arch/platform/zoul/dev/motion-sensor.h
