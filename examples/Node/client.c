@@ -3,7 +3,7 @@
 *   Año: 2018
 *   Grupo: Bentancour, Cabrera, Díaz
 *   Basado en $(CONTIKI)/examples/6tisch/simple-node/
-*   y $(CONTIKI)/examples/rpl-udp/udp-{client,server}.c
+*   y $(CONTIKI)/examples/rpl-udp/udp-client.c
 */
 #include "contiki.h"
 #include "net/routing/routing.h"
