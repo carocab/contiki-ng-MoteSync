@@ -1,10 +1,9 @@
 /**
- * @brief prueba interrupcion sensor
- * @author  MoteSync - Proyecto RSI - 2018
- * @date 5/11/2018
- * @version 1.0
- *
- **/
+*   Proyecto RSI - MoteSync
+*   Año: 2018
+*   Grupo: Bentancour, Cabrera, Díaz
+*   Programa de prueba para el user_sensor
+*/
 
 #include "contiki.h"
 #include <stdio.h>
