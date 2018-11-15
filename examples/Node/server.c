@@ -1,3 +1,10 @@
+/**
+*   Proyecto RSI - MoteSync
+*   Año: 2018
+*   Grupo: Bentancour, Cabrera, Díaz
+*   Basado en $(CONTIKI)/examples/6tisch/simple-node/
+*   y $(CONTIKI)/examples/rpl-udp/udp-server.c
+*/
 #include "contiki.h"
 #include "net/routing/routing.h"
 #include "net/netstack.h"
