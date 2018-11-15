@@ -1,3 +1,9 @@
+/**
+*   Proyecto RSI - MoteSync
+*   Año: 2018
+*   Grupo: Bentancour, Cabrera, Díaz
+*/
+
 #include "decoder.h"
 
 #include "contiki.h"
