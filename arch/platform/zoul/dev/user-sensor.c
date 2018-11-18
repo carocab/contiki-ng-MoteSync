@@ -27,7 +27,7 @@
  * Timer para filtrar
  */
 
-#define USER_SENSOR_FILTER_DURATION (CLOCK_SECOND >> 4)
+#define USER_SENSOR_FILTER_DURATION (CLOCK_SECOND)
 
 static struct timer filtertimer;
 
