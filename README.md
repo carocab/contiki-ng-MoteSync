@@ -9,9 +9,13 @@ git submodule update --init --recursive
 ```
 
 ## Driver del sensor
-Implementacion: [user-sensor.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/user-sensor.c)
-                [user-sensor.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/user-sensor.h)
-Archivos modificados para incluir al sensor:
+*Implementacion:*
+
+[user-sensor.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/user-sensor.c)
+
+[user-sensor.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/user-sensor.h)
+                
+*Archivos modificados para incluir al sensor:*
 
 [zoul-sensors.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/zoul-sensors.c)
 
@@ -19,14 +23,14 @@ Archivos modificados para incluir al sensor:
 
 [Makefile.include](https://github.com/carocab/contiki-ng-MoteSync/blob/master/Makefile.include)
 
-Programa de prueba:
+*Programa de prueba:*
 
 https://github.com/carocab/contiki-ng-MoteSync/tree/master/examples/prueba_user_sensor
 
                 
 ## TSCH
-Funciones para extraer current_slot_start y tsch_current_asn: [tsch-sync.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/os/net/mac/tsch/tsch-sync.h)
-Implementadas en: [tsch-slot-operation.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/os/net/mac/tsch/tsch-slot-operation.c)
+*Funciones para extraer* ´current_slot_start´ y ´tsch_current_asn´: [tsch-sync.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/os/net/mac/tsch/tsch-sync.h).
+*Implementadas en:* [tsch-slot-operation.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/os/net/mac/tsch/tsch-slot-operation.c).
 
 
 ## Programa principal de los nodos
