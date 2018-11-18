@@ -29,7 +29,7 @@ https://github.com/carocab/contiki-ng-MoteSync/tree/master/examples/prueba_user_
 
                 
 ## TSCH
-*Funciones para extraer* ´current_slot_start´ y ´tsch_current_asn´: [tsch-sync.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/os/net/mac/tsch/tsch-sync.h).
+*Funciones para extraer* `current_slot_start` y `tsch_current_asn`: [tsch-sync.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/os/net/mac/tsch/tsch-sync.h).
 *Implementadas en:* [tsch-slot-operation.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/os/net/mac/tsch/tsch-slot-operation.c).
 
 
