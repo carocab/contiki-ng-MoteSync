@@ -14,6 +14,7 @@ git submodule update --init --recursive
 [user-sensor.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/user-sensor.c)
 
 [user-sensor.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/user-sensor.h)
+Basado en [motion-sensor.h](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/motion-sensor.h)  [motion-sensor.c](https://github.com/carocab/contiki-ng-MoteSync/blob/master/arch/platform/zoul/dev/motion-sensor.c)
                 
 **Archivos modificados para incluir al sensor:**
 
@@ -36,3 +37,6 @@ https://github.com/carocab/contiki-ng-MoteSync/tree/master/examples/prueba_user_
 ## Programa principal de los nodos
 
 https://github.com/carocab/contiki-ng-MoteSync/tree/master/examples/Node
+
+Comunicación UDP basada en [rpl-udp](https://github.com/carocab/contiki-ng-MoteSync/tree/master/examples/rpl-udp) example.
+
