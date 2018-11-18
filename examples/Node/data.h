@@ -8,7 +8,7 @@ struct my_msg_t {
   uint32_t x_pos; // cm
   uint32_t y_pos; // cm
   uint32_t event_asn_ls4b;
-  uint32_t event_asn_ms1b;
+  uint8_t event_asn_ms1b;
   uint32_t event_offset; // ticks
 };
 
