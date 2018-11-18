@@ -6,17 +6,11 @@
 
 /*Conf RPL*/
 #define RPL_MRHOF_CONF_MAX_LINK_METRIC 10000
-/*#undef NETSTACK_MAX_ROUTE_ENTRIES
-#define NETSTACK_MAX_ROUTE_ENTRIES 6
-#undef NBR_TABLE_CONF_MAX_NEIGHBORS
-#define NBR_TABLE_CONF_MAX_NEIGHBORS 6
-#undef QUEUEBUF_CONF_NUM
-#define QUEUEBUF_CONF_NUM 8
-*/
+
 /* Set to enable TSCH security */
-//#ifndef WITH_SECURITY
+#ifndef WITH_SECURITY
 #define WITH_SECURITY 0
-//#endif /* WITH_SECURITY */
+#endif /* WITH_SECURITY */
 
 /* USB serial takes space, free more space elsewhere */
 #define SICSLOWPAN_CONF_FRAG 0
@@ -25,10 +19,11 @@
 /* Configure CC1200 radio */
 #undef  NETSTACK_CONF_RADIO
 #define NETSTACK_CONF_RADIO         cc1200_driver
-#define CC1200_CONF_USE_GPIO2       1 //en la wiki decia 0
+#define CC1200_CONF_USE_GPIO2       1
 #define CC1200_CONF_USE_RX_WATCHDOG 0
 #define ANTENNA_SW_SELECT_DEF_CONF  ANTENNA_SW_SELECT_SUBGHZ
 #define NETSTACK_CONF_RADIO         cc1200_driver
+
 /*******************************************************/
 /******************* Configure TSCH ********************/
 /*******************************************************/
@@ -36,7 +31,6 @@
 /* IEEE802.15.4 PANID */
 #define IEEE802154_CONF_PANID 0xaaaa
 
-/* Do not start TSCH at init, wait for NETSTACK_MAC.on() */
 #define TSCH_CONF_AUTOSTART 1
 
 /* 6TiSCH minimal schedule length.
@@ -44,10 +38,8 @@
 #define TSCH_SCHEDULE_CONF_DEFAULT_LENGTH 3
 
 #if WITH_SECURITY
-
 /* Enable security */
 #define LLSEC802154_CONF_ENABLED 1
-
 #endif /* WITH_SECURITY */
 
 
@@ -57,12 +49,7 @@
 /* Enable periodic RSSI sampling for TSCH statistics */
 #define TSCH_STATS_CONF_SAMPLE_NOISE_RSSI 0
 
-/* Reduce the TSCH stat "decay to normal" period to get printouts more often */
-//#define TSCH_STATS_CONF_DECAY_INTERVAL (60 * CLOCK_SECOND)
 
-/* parece ser el unico que tienen
-#define TSCH_CONF_DEFAULT_TIMESLOT_TIMING tsch_timeslot_timing_us_10000
-*/
 #define TSCH_CONF_DEFAULT_HOPPING_SEQUENCE TSCH_HOPPING_SEQUENCE_2_2
 
 
