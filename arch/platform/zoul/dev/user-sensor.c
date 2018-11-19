@@ -64,8 +64,8 @@ struct data_sensor_t get_data_sensor(void){
 static void
 user_interrupt_handler(gpio_hal_pin_mask_t pin_mask)
 {
-  event_time = RTIMER_NOW();
-  if(!timer_expired(&filtertimer))
+	event_time = RTIMER_NOW();
+	if(!timer_expired(&filtertimer))
   {
     return;
   }
@@ -86,9 +86,9 @@ user_interrupt_handler(gpio_hal_pin_mask_t pin_mask)
  * gpio_hal (os/dev/gpio-hal.{h,c})
  */
 static gpio_hal_event_handler_t user_handler = {
-  .next = NULL,
-  .handler = user_interrupt_handler,
-  .pin_mask = gpio_hal_pin_to_mask(USER_SENSOR_PIN) << (USER_SENSOR_PORT << 3),
+	.next = NULL,
+	.handler = user_interrupt_handler,
+	.pin_mask = gpio_hal_pin_to_mask(USER_SENSOR_PIN) << (USER_SENSOR_PORT << 3),
 };
 
 /*---------------------------------------------------------------------------*/
@@ -99,28 +99,28 @@ static gpio_hal_event_handler_t user_handler = {
 
 static int
 configure(int type, int value)
-{
-  if(type != USER_ACTIVE) {
-    return USER_ERROR;
-  }
+	{
+	if(type != USER_ACTIVE) {
+		return USER_ERROR;
+	}
 
-  if(!value) /* Disable sensor*/
-  { 
-    GPIO_DISABLE_INTERRUPT(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
-    return USER_SUCCESS;
-  }
-  else /* Enable sensor*/
-  {
-    GPIO_SOFTWARE_CONTROL(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
-    GPIO_SET_INPUT(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
-    GPIO_DETECT_FALLING(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
-    GPIO_TRIGGER_SINGLE_EDGE(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
-    ioc_set_over(USER_SENSOR_PORT, USER_SENSOR_PIN, IOC_OVERRIDE_DIS);
-    gpio_hal_register_handler(&user_handler);
-    GPIO_ENABLE_INTERRUPT(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
-    NVIC_EnableIRQ(USER_SENSOR_VECTOR);
-  }
-  return USER_SUCCESS;
+	if(!value) /* Disable sensor*/
+	{ 
+		GPIO_DISABLE_INTERRUPT(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
+		return USER_SUCCESS;
+	}
+	else /* Enable sensor*/
+	{
+		GPIO_SOFTWARE_CONTROL(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
+		GPIO_SET_INPUT(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
+		GPIO_DETECT_FALLING(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
+		GPIO_TRIGGER_SINGLE_EDGE(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
+		ioc_set_over(USER_SENSOR_PORT, USER_SENSOR_PIN, IOC_OVERRIDE_DIS);
+		gpio_hal_register_handler(&user_handler);
+		GPIO_ENABLE_INTERRUPT(USER_SENSOR_PORT_BASE, USER_SENSOR_PIN_MASK);
+		NVIC_EnableIRQ(USER_SENSOR_VECTOR);
+	}
+	return USER_SUCCESS;
 }
 
 /*---------------------------------------------------------------------------*/
