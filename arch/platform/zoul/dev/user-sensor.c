@@ -72,11 +72,11 @@ user_interrupt_handler(gpio_hal_pin_mask_t pin_mask)
   else
   {
 	timer_set(&filtertimer, USER_SENSOR_FILTER_DURATION);
-    data_sensor.ref_time = get_slot_start();
-    event_asn = get_asn();
-    data_sensor.asn_ls4b = event_asn.ls4b;
-    data_sensor.asn_ms1b = event_asn.ms1b;
-    data_sensor.event_time = event_time;
+	data_sensor.ref_time = get_slot_start();
+	event_asn = get_asn();
+	data_sensor.asn_ls4b = event_asn.ls4b;
+	data_sensor.asn_ms1b = event_asn.ms1b;
+	data_sensor.event_time = event_time;
   	sensors_changed(&user_sensor);
   }
 }
