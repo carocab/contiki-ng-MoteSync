@@ -40,7 +40,7 @@
 /* -------------------------------------------------------------------------- */
 
 /**
- * Identifier for the sensor in the sensors os module.
+ * Identificador para el sensor en el modulo "sensors"
  */
 #define USER_SENSOR "user_sensor"
 
@@ -55,7 +55,7 @@
 
 
 /**
- * Identifier for the sensor in the sensors os module.
+ * struct para registrar el sensor en el modulo "sensors"
  */
 extern const struct sensors_sensor user_sensor;
 /* -------------------------------------------------------------------------- */
